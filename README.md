@@ -25,7 +25,7 @@ Once you have Docker installed, Follow the next steps to build custom container 
 From within the folder of this repo, run the following command:
 
 ```
-docker build -t datasci .
+docker build -t clamytoe/datasci .
 ```
 
 **NOTE**: You can name your image whatver you like.
@@ -41,7 +41,7 @@ I'm on a Windows system, so my command will be different.
 If you're on a *Nix system, use `$PWD` instead of `%cd%`.
 
 ```
-docker run -p 8888:8888 -p 6006:6006 -v %cd%:/notebooks datasci
+docker run -p 8888:8888 -p 6006:6006 -v %cd%:/notebooks --name datasci clamytoe/datasci
 ```
 
 Once your container is running, open up a browser to [localhost:8888](http://localhost:8888)
@@ -51,7 +51,13 @@ Once your container is running, open up a browser to [localhost:8888](http://loc
 3. How to restart your container.
 
 The next time that you need to run your container, you can start it with its container name.
-Use the following command to find it:
+In our case, we named it **datasci** with this flag: `--name clamytoe/datasci`
+
+```
+docker start datasci
+```
+
+If you didn't name yours, you can find the random name that it was given with the following command:
 
 ```
 >docker ps -a
