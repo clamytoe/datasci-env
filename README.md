@@ -51,7 +51,7 @@ Once your container is running, open up a browser to [localhost:8888](http://loc
 3. How to restart your container.
 
 The next time that you need to run your container, you can start it with its container name.
-In our case, we named it **datasci** with this flag: `--name clamytoe/datasci`
+In our case, we named it **datasci** with this flag: `--name datasci`
 
 ```
 docker start datasci
