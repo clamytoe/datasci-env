@@ -12,7 +12,7 @@ RUN /opt/conda/bin/conda update -n base -c defaults conda -y && \
     /opt/conda/bin/conda install jupyter statsmodels pandas scikit-learn scipy seaborn -y && \
     /opt/conda/bin/conda install black flake8 isort mypy rich pandoc pytest faker pip -y && \
     /opt/conda/bin/conda install pyyaml h5py keras tensorflow xgboost -y && \
-    /opt/conda/bin/conda install pyppeteer imutils -y && \
+    /opt/conda/bin/conda install pyppeteer imutils bs4 html5lib -y && \
     /opt/conda/bin/pip install parquet wget
 
 RUN ["mkdir", "notebooks"]
