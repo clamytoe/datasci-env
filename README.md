@@ -41,7 +41,7 @@ I'm on a Windows system, so my command will be different.
 If you're on a *Nix system, use `$PWD` instead of `%cd%`.
 
 ```
-docker run -p 8888:8888 -p 6006:6006 -v %cd%:/notebooks --name datasci clamytoe/datasci
+docker run -p 8080:8080 -p 8888:8888 -p 6006:6006 -v %cd%:/notebooks --name datasci clamytoe/datasci
 ```
 
 Once your container is running, open up a browser to [localhost:8888](http://localhost:8888)
