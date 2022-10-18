@@ -11,9 +11,9 @@ RUN /opt/conda/bin/conda update -n base -c defaults conda -y && \
     /opt/conda/bin/conda install anaconda-client -y && \
     /opt/conda/bin/conda install jupyter statsmodels pandas scikit-learn scipy seaborn -y && \
     /opt/conda/bin/conda install black flake8 isort mypy rich pandoc pytest faker pip -y && \
-    /opt/conda/bin/conda install pyyaml h5py keras tensorflow xgboost pydot graphviz -y && \
+    /opt/conda/bin/conda install pyyaml h5py keras tensorflow pydot graphviz -y && \
     /opt/conda/bin/conda install pyppeteer imutils bs4 html5lib autoviz flask -y && \
-    /opt/conda/bin/pip install parquet wget
+    /opt/conda/bin/pip install xgboost bentoml parquet wget
 
 RUN ["mkdir", "notebooks"]
 COPY conf/.jupyter /root/.jupyter
